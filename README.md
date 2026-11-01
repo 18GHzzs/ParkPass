@@ -7,7 +7,6 @@
 ![Language](https://img.shields.io/badge/language-C%23-239120?logo=csharp&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=white)
 ![Status](https://img.shields.io/badge/status-in%20development-yellow)
-![License](https://img.shields.io/badge/license-MIT-blue)
 
 Built for **Mapúa Malayan Colleges Laguna (MMCL)**
 
@@ -28,7 +27,6 @@ Built for **Mapúa Malayan Colleges Laguna (MMCL)**
 - [Screenshots](#-screenshots)
 - [Roadmap](#-roadmap)
 - [Team](#-team)
-- [License](#-license)
 
 ---
 
@@ -152,10 +150,6 @@ ParkPass/
 | *Teammate* | *Role* |
 
 Developed at **Mapúa Malayan Colleges Laguna**.
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
