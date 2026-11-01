@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🅿️ ParkPass
+#  ParkPass
 
 **A campus parking automation system that replaces manual notebook logging with fast, reliable digital records.**
 
@@ -14,7 +14,7 @@ Built for **Mapúa Malayan Colleges Laguna (MMCL)**
 
 ---
 
-## 📖 Table of Contents
+##  Table of Contents
 
 - [About](#-about)
 - [The Problem](#-the-problem)
@@ -30,13 +30,13 @@ Built for **Mapúa Malayan Colleges Laguna (MMCL)**
 
 ---
 
-## 🚗 About
+##  About
 
 **ParkPass** is a campus parking automation system designed for the **students and security guards of Mapúa Malayan Colleges Laguna**. It replaces the paper notebooks currently used at parking entrances with a fast digital workflow for vehicle entry, verification, and record keeping.
 
 The project is also a practical application of core **data structures and algorithms** (lists, stacks, trees, and graphs) implemented from the ground up in **C#**.
 
-## ⚠️ The Problem
+##  The Problem
 
 Manual notebook logging at campus parking entrances leads to:
 
@@ -48,7 +48,7 @@ Manual notebook logging at campus parking entrances leads to:
 
 ParkPass addresses each of these by digitizing the entire process.
 
-## ✨ Features
+##  Features
 
 - **Fast vehicle check-in / check-out** to reduce queue times at entrances
 - **Quick verification** of registered vehicles and users
@@ -56,9 +56,9 @@ ParkPass addresses each of these by digitizing the entire process.
 - **Entry history tracking** for review and auditing
 - **Designed for two user roles:** students and guards
 
-> 💡 *Edit this list to match what your system actually does.*
+>  *Edit this list to match what your system actually does.*
 
-## 🧠 Data Structures & Algorithms
+##  Data Structures & Algorithms
 
 This project applies the following data structures to solve real parking-management problems:
 
@@ -69,15 +69,15 @@ This project applies the following data structures to solve real parking-managem
 | **Tree** | Organizing and searching vehicle records efficiently |
 | **Graph** | Modeling parking areas and the paths between them |
 
-> 💡 *Adjust the "Application" column to reflect exactly how you used each structure.*
+>  *Adjust the "Application" column to reflect exactly how you used each structure.*
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Language:** C#
 - **Framework:** .NET *(specify version, e.g. .NET 8)*
 - **IDE:** Visual Studio / VS Code
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -103,16 +103,16 @@ dotnet build
 dotnet run
 ```
 
-## 💻 Usage
+##  Usage
 
 1. Launch the application.
 2. Choose your role (**Guard** or **Student**).
 3. Guards can log vehicle entry and exit and verify registered vehicles.
 4. Students can view their parking information.
 
-> 💡 *Replace these steps with your actual menu flow or UI instructions.*
+>  *Replace these steps with your actual menu flow or UI instructions.*
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ParkPass/
@@ -123,17 +123,10 @@ ParkPass/
 └── README.md
 ```
 
-> 💡 *Update this to match your real folder layout.*
+>  *Update this to match your real folder layout.*
 
-## 📸 Screenshots
 
-*Add screenshots or a short GIF of the app here.*
-
-```md
-![ParkPass Demo](docs/demo.gif)
-```
-
-## 🗺️ Roadmap
+##  Roadmap
 
 - [x] Core data structure implementations
 - [x] Vehicle entry and exit logging
@@ -142,7 +135,7 @@ ParkPass/
 - [ ] Plate recognition or QR-based check-in
 - [ ] Reports and analytics for peak hours
 
-## 👥 Team
+##  Team
 
 | Name | Role |
 |---|---|
