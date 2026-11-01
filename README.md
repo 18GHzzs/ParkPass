@@ -1,12 +1,13 @@
 <div align="center">
 
-#  ParkPass
+# 🅿️ ParkPass
 
 **A campus parking automation system that replaces manual notebook logging with fast, reliable digital records.**
 
 ![Language](https://img.shields.io/badge/language-C%23-239120?logo=csharp&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=white)
 ![Status](https://img.shields.io/badge/status-in%20development-yellow)
+![Course](https://img.shields.io/badge/course-CIS242-blue)
 
 Built for **Mapúa Malayan Colleges Laguna (MMCL)**
 
@@ -14,74 +15,93 @@ Built for **Mapúa Malayan Colleges Laguna (MMCL)**
 
 ---
 
-##  Table of Contents
+## 📖 Table of Contents
 
 - [About](#-about)
 - [The Problem](#-the-problem)
+- [Objectives](#-objectives)
 - [Features](#-features)
-- [Data Structures & Algorithms](#-data-structures--algorithms)
+- [Data Structures](#-data-structures)
+- [Algorithms](#-algorithms)
 - [Tech Stack](#-tech-stack)
 - [Getting Started](#-getting-started)
-- [Usage](#-usage)
 - [Project Structure](#-project-structure)
 - [Screenshots](#-screenshots)
-- [Roadmap](#-roadmap)
 - [Team](#-team)
 
 ---
 
-##  About
+## 🚗 About
 
-**ParkPass** is a campus parking automation system designed for the **students and security guards of Mapúa Malayan Colleges Laguna**. It replaces the paper notebooks currently used at parking entrances with a fast digital workflow for vehicle entry, verification, and record keeping.
+**ParkPass** is a campus parking automation system that replaces the paper notebooks used at parking entrances. It serves **campus security guards**, **student and faculty drivers**, and **parking administrators**.
 
-The project is also a practical application of core **data structures and algorithms** (lists, stacks, trees, and graphs) implemented from the ground up in **C#**.
+Vehicles are checked in and out digitally by indexing plate numbers, student names, and academic programs. The system tracks available slot capacity in real time, manages entry waiting lines during peak arrival times, organizes campus parking zones hierarchically, and routes drivers to the nearest open parking area.
 
-##  The Problem
+The project applies core **data structures and algorithms** (Lists, Stacks, Queues, Trees, and Graphs) in **C#**.
 
-Manual notebook logging at campus parking entrances leads to:
+## ⚠️ The Problem
+
+Manual notebook logging at campus parking entrances causes:
 
 | Issue | Impact |
 |---|---|
 | Slow entry verification | Guards must search through handwritten pages |
 | Long vehicle queues | Congestion builds up during peak campus hours |
-| Lost or damaged records | Paper logs are easily misplaced, damaged, or illegible |
+| Lost records | Paper logs are easily misplaced, damaged, or illegible |
 
-ParkPass addresses each of these by digitizing the entire process.
+## 🎯 Objectives
 
-##  Features
+1. Replace manual notebook vehicle logging with a digital check-in system to eliminate entry bottlenecks and speed up vehicle flow.
+2. Implement Lists, Stacks, Queues, Trees, and Graphs to store vehicle profiles, manage gate queues, and provide suggested vacant hours and peak parking hours.
+3. Apply search, sort, and traversal algorithms to enable instant plate lookups, sort daily vehicle entries, and direct drivers to the nearest available parking space.
 
-- **Fast vehicle check-in / check-out** to reduce queue times at entrances
-- **Quick verification** of registered vehicles and users
-- **Persistent digital records** that replace paper logs
-- **Entry history tracking** for review and auditing
-- **Designed for two user roles:** students and guards
+## ✨ Features
 
->  *Edit this list to match what your system actually does.*
+### 1. Fast Vehicle Check-In & Check-Out
+Register and record incoming or outgoing vehicles by plate number, student name, and course, with real-time timestamps.
 
-##  Data Structures & Algorithms
+### 2. Gate Entry Waiting Queue
+Queues incoming vehicles in order (FIFO) at entry checkpoints when parking bays reach temporary capacity.
 
-This project applies the following data structures to solve real parking-management problems:
+### 3. Peak Traffic & Hourly Analytics
+Evaluates hourly vehicle volume to identify rush hours, calculate hourly averages, and suggest the best arrival times. Generates separate traffic profiles for **Thursday lab days** and **regular lecture days**.
+
+### 4. Hierarchical Parking Zone Tracking
+Organizes campus parking as **Parking Lot → Vehicle Section (Car / Motorcycle) → Individual Slot** to monitor real-time availability.
+
+### 5. Nearest Parking Routing
+Models the campus road network to direct drivers from the gate to the nearest parking area that has vacancies.
+
+## 🧠 Data Structures
 
 | Data Structure | Application in ParkPass |
 |---|---|
-| **List** | Storing registered vehicles and entry/exit logs |
-| **Stack** | Tracking recent entries and supporting undo of the latest action |
-| **Tree** | Organizing and searching vehicle records efficiently |
-| **Graph** | Modeling parking areas and the paths between them |
+| **List** | Master registry of authorized student and faculty vehicles, plus active daily check-in records |
+| **Stack** | Traffic stack (LIFO) that processes sequential hourly vehicle counts to track peak congestion windows and compute daily averages for schedule-based reports |
+| **Queue** | Physical vehicle arrival line (FIFO) at the campus entrance gates during peak rush hours |
+| **Tree** | Hierarchical layout of parking spaces (Left/Right Parking Lot → Vehicle Type → Slot Number) |
+| **Graph** | Campus road layout: gate checkpoints, intersections, and parking lots are vertices; connecting driveways are weighted edges used to find the nearest lot with vacancies |
 
->  *Adjust the "Application" column to reflect exactly how you used each structure.*
+## ⚙️ Algorithms
 
-##  Tech Stack
+| Algorithm | Purpose | Complexity |
+|---|---|---|
+| **Quick Sort** | Sorts daily log records by arrival time, student course, or plate number for end-of-day reporting | O(n log n) average |
+| **Binary Search** | Searches sorted plate numbers or student IDs for instant gate entry verification | O(log n) |
+| **Breadth-First Search (BFS)** | Traverses the driveway network to find the shortest path from the gate to an open parking section | O(V + E) |
+| **Depth-First Search (DFS)** | Traverses the roads near campus to find a route to the nearest open parking area | O(V + E) |
+
+## 🛠️ Tech Stack
 
 - **Language:** C#
 - **Framework:** .NET *(specify version, e.g. .NET 8)*
 - **IDE:** Visual Studio / VS Code
 
-##  Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- [.NET SDK](https://dotnet.microsoft.com/download) installed
+- [.NET SDK](https://dotnet.microsoft.com/download)
 - Git
 
 ### Installation
@@ -97,50 +117,45 @@ cd ParkPass
 dotnet build
 ```
 
-### Running the Application
+### Run
 
 ```bash
 dotnet run
 ```
 
-##  Usage
-
-1. Launch the application.
-2. Choose your role (**Guard** or **Student**).
-3. Guards can log vehicle entry and exit and verify registered vehicles.
-4. Students can view their parking information.
-
->  *Replace these steps with your actual menu flow or UI instructions.*
-
-##  Project Structure
+## 📁 Project Structure
 
 ```
 ParkPass/
 ├── Models/            # Vehicle, User, and log classes
-├── DataStructures/    # Custom List, Stack, Tree, and Graph implementations
-├── Services/          # Core parking logic
+├── DataStructures/    # List, Stack, Queue, Tree, and Graph implementations
+├── Algorithms/        # Quick Sort, Binary Search, BFS, DFS
+├── Services/          # Check-in/out, analytics, and routing logic
 ├── Program.cs         # Application entry point
 └── README.md
 ```
 
->  *Update this to match your real folder layout.*
+> 💡 *Update this to match your real folder layout.*
 
+## 📸 Screenshots
 
-##  Roadmap
+*Add screenshots or a short GIF of the app here.*
 
-- [x] Core data structure implementations
-- [x] Vehicle entry and exit logging
-- [ ] Persistent file or database storage
-- [ ] Graphical user interface
-- [ ] Plate recognition or QR-based check-in
-- [ ] Reports and analytics for peak hours
+```md
+![ParkPass Demo](docs/demo.gif)
+```
 
-##  Team
+## 👥 Team
+
+**Group 8, CIS242**
 
 | Name | Role |
 |---|---|
-| *Your Name* | *Role* |
-| *Teammate* | *Role* |
+| Aivin John Catangay | Project Leader / Developer |
+| Ferdinand Mark Bartolome | Developer |
+| Tristan Bien Canlas | Developer |
+| Joshua Evan Delos Santos | Developer |
+| Derek Dwyane Ibanga | Developer |
 
 Developed at **Mapúa Malayan Colleges Laguna**.
 
