@@ -87,7 +87,6 @@ Models the campus road network to direct drivers from the gate to the nearest pa
 |---|---|---|
 | Quick Sort | Sorts daily log records by arrival time, student course, or plate number for end-of-day reporting | O(n log n) average |
 | Binary Search | Searches sorted plate numbers or student IDs for instant gate entry verification | O(log n) |
-| Breadth-First Search (BFS) | Traverses the driveway network to find the shortest path from the gate to an open parking section | O(V + E) |
 | Depth-First Search (DFS) | Traverses the roads near campus to find a route to the nearest open parking area | O(V + E) |
 
 ## Tech Stack
